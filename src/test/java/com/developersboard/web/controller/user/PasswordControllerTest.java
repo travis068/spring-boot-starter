@@ -54,17 +54,21 @@ class PasswordControllerTest {
 
   @Test
   void changePasswordCorrectCredentials() {
+    // Setting up the parameter values
     Model model = mock(Model.class);
     RedirectAttributes redirectAttributes = mock(RedirectAttributes.class);
     UserDto userDto = new UserDto();
     userDto.setUsername("Raven");
     userDto.setPassword("sammy48384fireBond");
 
+    // Mocking the userService and passwordEncoder accordingly
     when(userService.findByUsername("Raven")).thenReturn(userDto);
     when(passwordEncoder.matches("sammy48384fireBond", userDto.getPassword())).thenReturn(true);
 
+    // Get results based on the mock configurations
     String result = passwordController.changePassword(userDto, model, redirectAttributes);
 
+    // Assert Statements according to the results = PASSWORD_RESET_COMPLETE_VIEW_NAME constant
     assertEquals(PasswordConstants.PASSWORD_RESET_COMPLETE_VIEW_NAME, result);
   }
 }
