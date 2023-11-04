@@ -33,7 +33,7 @@ public class UserProfileControllerTest {
   }
 
   @Test
-  void incorrectProfileUpdate() {
+  void incorrectProfileUpdateTest() {
     // Setting up the parameter values
     UserDto user = new UserDto();
     user.setUsername("Raven");

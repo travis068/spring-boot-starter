@@ -45,7 +45,7 @@ public class SignUpControllerTest {
   }
 
   @Test
-  void testCorrectCompleteSignUp() {
+  void correctCompleteSignUpTest() {
     // Setting up the parameter values
     String token = "79C07821B0D9A8A6EBC515ADFE480D60";
     RedirectAttributes redirectAttributes = mock(RedirectAttributes.class);

@@ -53,7 +53,7 @@ class PasswordControllerTest {
   @Mock PasswordEncoder passwordEncoder;
 
   @Test
-  void changePasswordCorrectCredentials() {
+  void changePasswordForCorrectCredentialsTest() {
     // Setting up the parameter values
     Model model = mock(Model.class);
     RedirectAttributes redirectAttributes = mock(RedirectAttributes.class);
